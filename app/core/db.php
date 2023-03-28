@@ -1,4 +1,6 @@
 <?
+namespace App;
+use App;
 class Db 
 {
 
