@@ -13,7 +13,8 @@ class Model
 	*/
 
 	// метод выборки данных
-	public function get_data()
+	
+	static public function get_data($query=null)
 	{
 		// todo
 	}

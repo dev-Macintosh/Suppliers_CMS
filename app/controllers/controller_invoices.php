@@ -8,9 +8,10 @@ class Controller_Invoices extends Controller
 		$this->view = new View();
 	}
 
-	function action_index($query)
+	function action_index($query=null)
 	{	
-		$data = $this->model->get_data($query);		
+		$data = Model_Invoices::get_data($query);		
+		var_dump($data);	
 		$this->view->generate('invoices_view.php', 'template_view.php', $data);
 	}
 }

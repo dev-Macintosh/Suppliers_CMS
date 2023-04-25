@@ -17,7 +17,7 @@ class Route
 
 		$query=[];
 		foreach (explode('&', $_SERVER['QUERY_STRING']) as $param) {
-			$query[explode('=', $param, 2)[0]]=explode('=', $param, 2)[1];
+			$query[explode('=', $param, 2)[0]]=urldecode(explode('=', $param, 2)[1]);
 		}
 		if (!empty($routes[1])) {
 			$controller_name = $routes[1];

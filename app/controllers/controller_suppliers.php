@@ -8,9 +8,10 @@ class Controller_Suppliers extends Controller
 		$this->view = new View();
 	}
 
-	function action_index()
+	function action_index($query=null)
 	{	
-		$data = $this->model->get_data();		
+		$data = Model_Suppliers::get_data();	
+
 		$this->view->generate('suppliers_view.php', 'template_view.php', $data);
 	}
 }

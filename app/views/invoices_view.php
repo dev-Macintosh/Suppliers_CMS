@@ -14,16 +14,5 @@
     ?>
 </table>
 <h3>Выберите поставщика, по которому необходимому отображить накладные</h2>
-<form method="GET" action="">
-<select name="supplier">
 <?php
-
-foreach ($data as $row) {
-    echo '<option>1</option><option>2</option>';
-}
-
-?>
-</select>
-
-<button type="submit">123</button>
-</form>
+include 'app/includes/suppliers.php';
