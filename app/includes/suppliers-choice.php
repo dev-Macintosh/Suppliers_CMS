@@ -1,4 +1,4 @@
-<form method="GET" action="">
+<form method="GET">
     <select name="supplier">
         <?php
         foreach (Model_Suppliers::get_data() as $row) {

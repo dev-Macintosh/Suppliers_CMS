@@ -1,10 +1,10 @@
 <h1>Товары</h1>
 <table>
-    <tr>
-        <td>Код товара</td>
-        <td>Цена</td>
-        <td>Единица измерения</td>
-    </tr>
+    <thead>
+        <th>Код товара</th>
+        <th>Цена</th>
+        <th>Единица измерения</th>
+    </thead>
     <?php
 
     foreach ($data as $index=>$row) {
