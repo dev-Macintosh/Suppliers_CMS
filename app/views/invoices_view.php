@@ -15,4 +15,4 @@
 </table>
 <h3>Выберите поставщика, по которому необходимому отображить накладные</h2>
 <?php
-include 'app/includes/suppliers.php';
+include 'app/includes/suppliers-choice.php';

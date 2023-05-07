@@ -7,7 +7,6 @@ class Model_Invoices extends Model
 		$string_query=null;
 		if(isset($query["supplier"])){
 			$string_query="SELECT * FROM Накладная INNER JOIN Поставщики ON Накладная.`Код поставщика` =Поставщики.`Код поставщика` WHERE Поставщики.`Наименование`='{$query["supplier"]}'";
-			echo $string_query;
 		}
 		else{
 			$string_query="SELECT * FROM Накладная";

@@ -38,7 +38,9 @@ body {
 	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 	font-family: "Montserrat", sans-serif;
 }
-
+.header-menu{
+	position: relative;
+}
 h1 {
 	font-weight: 500;
 }
