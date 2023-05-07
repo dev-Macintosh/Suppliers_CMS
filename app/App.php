@@ -33,7 +33,7 @@ class App
     public static function loadClass($className)
     {
         $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
-        require_once ROOTPATH.DIRECTORY_SEPARATOR.$className.'.php';
+        include_once ROOTPATH.DIRECTORY_SEPARATOR.$className.'.php';
     }
     
     

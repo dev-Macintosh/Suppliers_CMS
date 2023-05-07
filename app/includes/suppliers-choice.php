@@ -8,5 +8,5 @@
         ?>
     </select>
 
-    <button type="submit">123</button>
+    <button type="submit">Выполнить</button>
 </form>

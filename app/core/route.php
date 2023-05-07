@@ -40,14 +40,14 @@ class Route
 		$model_file = strtolower($model_name) . '.php';
 		$model_path = "app/models/" . $model_file;
 		if (file_exists($model_path)) {
-			include "app/models/" . $model_file;
+			require_once "app/models/" . $model_file;
 		}
 
 
 		$controller_file = strtolower($controller_name) . '.php';
 		$controller_path = "app/controllers/" . $controller_file;
 		if (file_exists($controller_path)) {
-			include "app/controllers/" . $controller_file;
+			require_once "app/controllers/" . $controller_file;
 		} else {
 
 			Route::ErrorPage404();
