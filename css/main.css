@@ -154,3 +154,18 @@ tr td:last-child {
 .header-menu__item:hover {
 	text-decoration: underline;
 }
+.progress__label {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+  }
+  
+  .progress__bar {
+	width: 100%;
+	background-color: #d8d8d8;
+  }
+  
+  .progress__bar-progress {
+	width: 10%;
+	height: 5px;
+	background-color: #51aca7;
+  }

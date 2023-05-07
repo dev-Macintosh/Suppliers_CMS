@@ -15,6 +15,6 @@ class Controller_Orders extends Controller
 	}
     function action_ones($query=null){
         $data=$this->model->get_order_detail($query);
-        $this->view->generate('orders_view.php', 'template_view.php', $data);
+        $this->view->generate('orders_detail_view.php', 'template_view.php', $data);
     }
 }
