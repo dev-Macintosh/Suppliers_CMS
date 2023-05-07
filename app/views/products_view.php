@@ -13,3 +13,6 @@
 
     ?>
 </table>
+<h3>Выберите поставщика, по которому необходимому отображить товары</h2>
+    <?php
+    include 'app/includes/suppliers-choice.php';
