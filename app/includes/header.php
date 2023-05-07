@@ -4,6 +4,7 @@
       <a class="header-menu__item" href="../suppliers/index">Поставщики</a>
       <a class="header-menu__item" href="../invoices/index">Накладные</a>
       <a class="header-menu__item" href="../products/index">Товары</a>
+      <a class="header-menu__item" href="../orders/index">Заказы</a>
     </div>
 
   </div>
