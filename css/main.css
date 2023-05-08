@@ -246,12 +246,16 @@ tr td:last-child {
 
 .header-menu__item-sublock {
     position: absolute;
-    top: 44px;
+    top: 100%;
     display: none;
     background-color: rgba(0, 0, 0, 0.301);
     padding: 15px;
+    z-index: 1001;
 }
-
+.header-menu__item-sublock:empty{
+    opacity: 0;
+    visibility: hidden;
+}
 .header-menu__item-sublock__item {
     white-space: nowrap;
 }

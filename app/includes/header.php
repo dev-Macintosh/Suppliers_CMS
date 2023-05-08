@@ -3,13 +3,11 @@
     <div class="header-menu__wrapper">
       <div class="header-menu__item" >
         <a href="../suppliers/index" class="header-menu__item__link">Поставщики</a>
-        <div class="header-menu__item-sublock">
-        </div>
+        <div class="header-menu__item-sublock"></div>
       </div>
       <div class="header-menu__item" >
         <a href="../invoices/index" class="header-menu__item__link">Накладные</a>
-        <div class="header-menu__item-sublock">
-        </div>
+        <div class="header-menu__item-sublock"></div>
       </div>
       <div class="header-menu__item" >
         <a href="../products/index" class="header-menu__item__link">Товары</a>
