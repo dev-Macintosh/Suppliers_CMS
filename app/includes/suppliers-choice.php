@@ -13,5 +13,5 @@
         ?>
     </select>
 
-    <button type="submit">Выполнить</button>
+    <button class="button-water" type="submit">Выполнить</button>
 </form>
