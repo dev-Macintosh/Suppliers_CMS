@@ -4,7 +4,52 @@
 
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+.h3-white {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* <select> styles */
+
+select {
+    /* Reset */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20em;
+    height: 3em;
+    padding: 0 4em 0 1em;
+    background: url(/images/icons/caret-down.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* <option> colors */
+    /* Remove focus outline */
+    /* Remove IE arrow */
+}
+
+select option {
+    color: #000000;
+    padding: 10px;
+    background-color: rgba(155, 155, 155, 0.164);
+}
+
+select:focus {
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 .header {
@@ -25,14 +70,14 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: MidnightBlue;
+    background-color: #a4a4c3;
     opacity: 0.3;
 }
 
 .header-section {
     position: relative;
     padding: 15% 0 10%;
-    max-width: 640px;
+    max-width: 890px;
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -53,12 +98,12 @@ h2 {
 
 #content-wrap {
     position: relative;
-    background-color: white;
+    background: linear-gradient(180deg, #e5d54f, #bbbbbb);
 }
 
 .content {
     position: relative;
-    max-width: 640px;
+    max-width: 890px;
     margin-left: auto;
     margin-right: auto;
     padding: 250px 40px;
@@ -99,11 +144,11 @@ h2 {
 }
 
 table {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     border-radius: 10px;
     border-spacing: 0;
     text-align: center;
+    width: 100%;
 }
 
 th {
@@ -157,9 +202,10 @@ tr td:last-child {
 
 .header-menu__wrapper {
     padding: 20px;
-    max-width: 640px;
+    max-width: 890px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     gap: 30px;
 }
@@ -237,6 +283,67 @@ tr td:last-child {
 
 .progress__bar-transaction__point:hover+.progress__bar-transaction-info {
     opacity: 1;
+}
+
+.select-form {
+    display: flex;
+    gap: 20px;
+}
+
+.select-form>select {
+    flex: 1;
+}
+
+.button-water {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 0.75em 1em;
+    color: blue;
+    border: 0.15em solid blue;
+    border-radius: calc(0.2em + 0.5em + 0.15em);
+    transition: 4s;
+}
+
+.button-water:before,
+.button-water:after {
+    content: "";
+    position: absolute;
+    top: -1.5em;
+    z-index: -1;
+    width: 200%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 40%;
+    background-color: rgba(0, 0, 255, 0.25);
+    transition: 4s;
+}
+
+.button-water:before {
+    left: -80%;
+    transform: translate3d(0, 5em, 0) rotate(-340deg);
+}
+
+.button-water:after {
+    right: -80%;
+    transform: translate3d(0, 5em, 0) rotate(390deg);
+}
+
+.button-water:hover,
+.button-water:focus {
+    color: white;
+}
+
+.button-water:hover:before,
+.button-water:hover:after,
+.button-water:focus:before,
+.button-water:focus:after {
+    transform: none;
+    background-color: rgba(0, 0, 255, 0.75);
 }
 
 @keyframes opacityUp {

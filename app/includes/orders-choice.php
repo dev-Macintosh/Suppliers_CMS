@@ -1,4 +1,4 @@
-<form method="GET">
+<form method="GET" class="select-form">
     <select name="order">
         <?php
         use App\Route;
@@ -14,5 +14,5 @@
         ?>
     </select>
 
-    <button type="submit">Выполнить</button>
+    <button class="button-water" type="submit">Выполнить</button>
 </form>

@@ -5,8 +5,8 @@ if (isset(Route::getQuery()["order"])) {
   ?>
 
   <div class="progress">
-    <div class="progress__label">
-      Оплата на
+    <div class="progress__label h3-white">
+      Оплачено на
       <span class="progress__label-progress">0%</span>
     </div>
 
@@ -17,7 +17,7 @@ if (isset(Route::getQuery()["order"])) {
 
   <?php
 } ?>
-<h3>Выберите заказ, по которому необходимо отобразить детальную информацию</h3>
+<h3 class="h3-white">Выберите заказ, по которому необходимо отобразить детальную информацию</h3>
 <?php
 
 include 'app/includes/orders-choice.php';

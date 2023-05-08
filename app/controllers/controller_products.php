@@ -13,4 +13,7 @@ class Controller_Products extends Controller
 		$data = Model_Products::get_data($query);		
 		$this->view->generate('products/products_view.php', 'template_view.php', $data);
 	}
+	function action_add(){
+		$this->view->generate('products/products_add_view.php', 'template_view.php', null);
+	}
 }

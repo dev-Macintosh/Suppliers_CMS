@@ -1,4 +1,4 @@
-<form method="GET">
+<form method="GET" class="select-form">
     <select name="supplier">
         <?php
         use App\Route;

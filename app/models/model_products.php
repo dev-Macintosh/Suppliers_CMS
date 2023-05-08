@@ -10,7 +10,6 @@ class Model_Products extends Model
 			INNER JOIN Накладная ON Товары.`Код накладной` =Накладная.`Код накладной` 
 			INNER JOIN Поставщики ON Накладная.`Код поставщика` =Поставщики.`Код поставщика` 
 			WHERE Поставщики.`Наименование`='{$query["supplier"]}'";
-			echo $string_query;
 		} else {
 			$string_query = "SELECT * FROM Товары";
 		}
