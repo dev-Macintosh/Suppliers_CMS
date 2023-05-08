@@ -12,6 +12,6 @@ class Controller_Suppliers extends Controller
 	{	
 		$data = Model_Suppliers::get_data();	
 
-		$this->view->generate('suppliers_view.php', 'template_view.php', $data);
+		$this->view->generate('suppliers/suppliers_view.php', 'template_view.php', $data);
 	}
 }

@@ -11,6 +11,6 @@ class Controller_Invoices extends Controller
 	function action_index($query=null)
 	{	
 		$data = Model_Invoices::get_data($query);		
-		$this->view->generate('invoices_view.php', 'template_view.php', $data);
+		$this->view->generate('invoices/invoices_view.php', 'template_view.php', $data);
 	}
 }
