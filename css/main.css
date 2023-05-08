@@ -7,6 +7,23 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
+.styled-scrollbars::-webkit-scrollbar {
+    width: 8px;
+    /* в основном для вертикальных полос прокрутки */
+    height: 10px;
+    /* в основном для горизонтальных полос прокрутки */
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb {
+    /* плашка-бегунок */
+    background: #000000;
+}
+
+.styled-scrollbars::-webkit-scrollbar-track {
+    /* фон */
+    background: #ffffff;
+}
+
 .h3-white {
     font-size: 22px;
     color: #ffffff;
@@ -123,6 +140,7 @@ h2 {
     line-height: 0;
     border-radius: 50%;
     transition: all 0.3s linear;
+    z-index: 1001;
 }
 
 .go-top:hover {
@@ -132,6 +150,7 @@ h2 {
 .go-top--show {
     opacity: 1;
     visibility: visible;
+    animation: scaleUp 2s infinite linear;
 }
 
 .footer {
@@ -211,13 +230,34 @@ tr td:last-child {
 }
 
 .header-menu__item {
+    position: relative;
+}
+
+.header-menu__item__link,
+.header-menu__item-sublock__item {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-.header-menu__item:hover {
+.header-menu__item__link:hover {
     text-decoration: underline;
+}
+
+.header-menu__item-sublock {
+    position: absolute;
+    top: 44px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.301);
+    padding: 15px;
+}
+
+.header-menu__item-sublock__item {
+    white-space: nowrap;
+}
+
+.header-menu__item:hover>.header-menu__item-sublock {
+    display: block;
 }
 
 .progress__label {
@@ -268,7 +308,7 @@ tr td:last-child {
     transform: translate(-45%, -100%);
     background: rgb(255, 196, 0);
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     opacity: 0;
 }
 
@@ -352,5 +392,17 @@ tr td:last-child {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.2);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
     }
 }

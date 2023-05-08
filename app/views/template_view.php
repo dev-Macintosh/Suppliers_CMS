@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="styled-scrollbars">
 	<?php include 'app/includes/header.php'; ?>
 	<div id="content-wrap">
 		<div class="content">
