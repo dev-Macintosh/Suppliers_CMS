@@ -220,7 +220,6 @@ tr td:last-child {
 }
 
 .header-menu__wrapper {
-    padding: 20px;
     max-width: 890px;
     margin: 0 auto;
     display: flex;
@@ -231,6 +230,7 @@ tr td:last-child {
 
 .header-menu__item {
     position: relative;
+    padding: 20px 0;
 }
 
 .header-menu__item__link,
