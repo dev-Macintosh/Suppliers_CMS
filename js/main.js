@@ -12,13 +12,37 @@ $(window).scroll(function() {
 $(window).resize(function() {
     parallax_height();
 });
+
+const goTopBtn = document.querySelector(".go-top");
+
+window.addEventListener("scroll", trackScroll);
+goTopBtn.addEventListener("click", goTop);
+
+function trackScroll() {
+    const scrolled = window.pageYOffset;
+    const coords = document.documentElement.clientHeight;
+    if (scrolled > coords / 2) {
+        goTopBtn.classList.add("go-top--show");
+    } else {
+        goTopBtn.classList.remove("go-top--show");
+    }
+}
+
+function goTop() {
+
+    if (window.pageYOffset > 0) {
+        window.scrollBy(0, -10);
+        setTimeout(goTop, 0);
+    }
+}
+
 export class Progress {
     constructor(node, data) {
         this.node = node;
         this.currentWidth = 0;
         this.maxWidth = 0;
         if (!this.node) return;
-        //-----------------------
+
         let payed_sum = 0;
         data["Операции"].forEach(element => {
             payed_sum += Number.parseInt(element["Сумма"]);
@@ -33,11 +57,11 @@ export class Progress {
         });
         this.maxWidth = Math.floor(Number.isNaN(payed_sum / data["Общая сумма"]) ? 0 : (payed_sum / data["Общая сумма"]) * 100);
         delete window.payed_sum;
-        //------------------------------
+
         this.animation = this.animation.bind(this);
         this.label = this.node.querySelector(".progress__label-progress");
         this.bar = this.node.querySelector(".progress__bar-progress");
-        this.interval = setInterval(this.animation, 30);
+        this.interval = setInterval(this.animation, 40);
     }
 
     animation() {
