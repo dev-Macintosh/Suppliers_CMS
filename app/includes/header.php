@@ -5,6 +5,7 @@
       <a class="header-menu__item" href="../invoices/index">Накладные</a>
       <a class="header-menu__item" href="../products/index">Товары</a>
       <a class="header-menu__item" href="../orders/index">Заказы</a>
+      <a class="header-menu__item" href="../orders/ones">Заказы детально</a>
     </div>
 
   </div>

@@ -165,7 +165,7 @@ tr td:last-child {
   }
   
   .progress__bar-progress {
-	width: 10%;
+	width: 0%;
 	height: 5px;
 	background-color: #51aca7;
   }

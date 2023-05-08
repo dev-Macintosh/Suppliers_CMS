@@ -28,7 +28,7 @@ class Progress {
     }
     
     animation() {
-      this.defaultWidth >= 99 ? clearInterval(this.interval) : null;
+      this.defaultWidth >= 99   ? clearInterval(this.interval) : null;
       this.defaultWidth++;
       this.label.textContent = this.defaultWidth + "%";
       this.bar.style.width = this.defaultWidth + "%";
