@@ -15,10 +15,7 @@ class Route
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
 		$routes[2] = explode('?', $routes[2])[0];
 
-		$query=[];
-		foreach (explode('&', $_SERVER['QUERY_STRING']) as $param) {
-			$query[explode('=', $param, 2)[0]]=urldecode(explode('=', $param, 2)[1]);
-		}
+
 		if (!empty($routes[1])) {
 			$controller_name = $routes[1];
 		}
@@ -59,7 +56,7 @@ class Route
 
 		if (method_exists($controller, $action)) {
 
-			$controller->$action($query);
+			$controller->$action(Route::getQuery());
 		} else {
 			echo $controller_name . "<br>";
 			echo $action_name;
@@ -74,6 +71,13 @@ class Route
 		header('HTTP/1.1 404 Not Found');
 		header("Status: 404 Not Found");
 		header('Location:' . $host . '404');
+	}
+	static function getQuery(){
+		$query=[];
+		foreach (explode('&', $_SERVER['QUERY_STRING']) as $param) {
+			$query[explode('=', $param, 2)[0]]=urldecode(explode('=', $param, 2)[1]);
+		}
+		return $query;
 	}
 
 }

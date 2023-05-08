@@ -20,7 +20,7 @@
 	</div>
 	<?php include 'app/includes/footer.php'; ?>
 	<script src="/js/jquery.min.js"></script>
-	<script src="/js/main.js" defer></script>
+	<script type="module" src="/js/main.js" defer></script>
 </body>
 
 </html>
