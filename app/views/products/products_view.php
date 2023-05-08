@@ -4,11 +4,12 @@
         <th>Код товара</th>
         <th>Цена</th>
         <th>Единица измерения</th>
+        <th>Удалить</th>
     </thead>
     <?php
 
     foreach ($data as $index=>$row) {
-        echo '<tr><td>Товар №' . ($index + 1)   . '</td><td>' . $row['Цена'] . '</td><td>' . $row['Единица измерения'] . '</td></tr>';
+        echo '<tr><td>Товар №' . ($index + 1)   . '</td><td>' . $row['Цена'] . '</td><td>' . $row['Единица измерения'] . '</td><td><button> <img src="/images/icons/trash.svg" alt="Иконка удаления" width="30"></button></td></tr>';
     }
 
     ?>
