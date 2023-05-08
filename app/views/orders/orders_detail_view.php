@@ -1,5 +1,6 @@
 <?php
 use App\Route;
+use Ramsey\Uuid\Uuid;
 
 if (isset(Route::getQuery()["order"])) {
   ?>
@@ -13,6 +14,7 @@ if (isset(Route::getQuery()["order"])) {
     <div class="progress__bar">
       <div class="progress__bar-progress"></div>
     </div>
+    <span class="progress__total-label">Общая сумма: <?php echo $data["Общая сумма"] . " р." ?></span>
   </div>
 
   <?php
@@ -26,6 +28,8 @@ View::printData($data);
 <script type="module">
   import { Progress } from '/js/main.js';
   const root = document.querySelector(".progress");
-  let data = <?php echo json_encode($data, JSON_HEX_TAG); ?>, payed_sum = 0;
-  new Progress(root, data);
+  let data = <?php echo json_encode($data, JSON_HEX_TAG); ?>;
+  let hash="<?php echo Uuid::uuid4();?>";
+
+  new Progress(root, data,hash);
 </script>

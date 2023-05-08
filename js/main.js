@@ -1,3 +1,4 @@
+import * as UUID from "/js/uuid.js";
 function parallax_height() {
     var scroll_top = $(window).scrollTop();
     var sample_section_top = $(".content").offset().top;
@@ -6,10 +7,10 @@ function parallax_height() {
     $(".header").css({ height: header_height - scroll_top + 100 });
 }
 parallax_height();
-$(window).scroll(function() {
+$(window).scroll(function () {
     parallax_height();
 });
-$(window).resize(function() {
+$(window).resize(function () {
     parallax_height();
 });
 
@@ -37,7 +38,7 @@ function goTop() {
 }
 
 export class Progress {
-    constructor(node, data) {
+    constructor(node, data, hash) {
         this.node = node;
         this.currentWidth = 0;
         this.maxWidth = 0;
@@ -52,6 +53,7 @@ export class Progress {
                 <div class="progress__bar-transaction-info">
                   <div class="progress__bar-transaction-info__price">Сумма: ` + element["Сумма"] + `р.</div>
                   <div class="progress__bar-transaction-info__type">Способ оплаты: ` + element["Тип"] + `</div>
+                  <div class="progress__bar-transaction-info__type">Индентификатор транзакции: ` + UUID.uuidv4() + `</div>
                 </div>
               </div>`;
         });

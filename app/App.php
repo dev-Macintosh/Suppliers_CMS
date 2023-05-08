@@ -4,6 +4,7 @@ require_once 'core/view.php';
 require_once 'core/controller.php';
 require_once 'core/route.php';
 require_once 'core/db.php';
+require 'vendor/autoload.php';
 
 
 class App
@@ -27,7 +28,7 @@ class App
         static::$router = new App\Route();
         static::$db = new App\Db();
         static::$router::start();
-
+        
     }
     
     public static function loadClass($className)
