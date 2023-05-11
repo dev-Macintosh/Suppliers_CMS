@@ -38,7 +38,7 @@ function goTop() {
 }
 
 export class Progress {
-    constructor(node, data, hash) {
+    constructor(node, data) {
         this.node = node;
         this.currentWidth = 0;
         this.maxWidth = 0;

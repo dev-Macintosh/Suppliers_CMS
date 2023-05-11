@@ -22,6 +22,7 @@
 	<div class="go-top"> <img src="/images/icons/right-arrow.png" width="50" alt="Стрелка вверх"> </div>
 	<script src="/js/jquery.min.js"></script>
 	<script type="module" src="/js/main.js" defer></script>
+	<script src="/js/mail.js" defer></script>
 </body>
 
 </html>

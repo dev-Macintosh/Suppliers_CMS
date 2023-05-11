@@ -29,7 +29,6 @@ View::printData($data);
   import { Progress } from '/js/main.js';
   const root = document.querySelector(".progress");
   let data = <?php echo json_encode($data, JSON_HEX_TAG); ?>;
-  let hash="<?php echo Uuid::uuid4();?>";
 
-  new Progress(root, data,hash);
+  new Progress(root, data);
 </script>
