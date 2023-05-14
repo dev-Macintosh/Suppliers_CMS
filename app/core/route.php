@@ -9,7 +9,7 @@ class Route
 	static function start()
 	{
 
-		$controller_name = 'suppliers';
+		$controller_name = 'main';
 		$action_name = 'index';
 
 		$routes = explode('/', $_SERVER['REQUEST_URI']);

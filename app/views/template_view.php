@@ -13,15 +13,34 @@
 </head>
 
 <body class="styled-scrollbars">
+<?php
+		include 'app/includes/promo-action.php';
+		include 'app/includes/header.php';
+		?>
+	<div class="content">
 
-	<?php
-	include 'app/includes/promo-action.php';
-	include 'app/includes/header.php';
-	?>
-	<div id="content-wrap">
-		<div class="content">
-			<?php include 'app/views/' . $content_view; ?>
+		<div id="content-wrap">
+			<div class="content">
+				<?php include 'app/views/' . $content_view; ?>
+				<div class="content__choice-page">
+					<div class="content__choice-page__wrapper">
+						<div class="content__choice-page__item">
+							Поставщики
+						</div>
+						<div class="content__choice-page__item">
+							Накладные
+						</div>
+						<div class="content__choice-page__item">
+							Товары
+						</div>
+						<div class="content__choice-page__item">
+							Заказы
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
 	</div>
 	<?php include 'app/includes/footer.php'; ?>
 	<div class="go-top"> <img src="/images/icons/right-arrow.png" width="50" alt="Стрелка вверх"> </div>
