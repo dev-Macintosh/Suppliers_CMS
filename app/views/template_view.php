@@ -6,13 +6,18 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<title>Расчёт с поставщиками</title>
+	<link rel="stylesheet" type="text/css" href="/css/fonts.css" />
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 
 
 </head>
 
 <body class="styled-scrollbars">
-	<?php include 'app/includes/header.php'; ?>
+
+	<?php
+	include 'app/includes/promo-action.php';
+	include 'app/includes/header.php';
+	?>
 	<div id="content-wrap">
 		<div class="content">
 			<?php include 'app/views/' . $content_view; ?>

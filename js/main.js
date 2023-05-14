@@ -1,18 +1,18 @@
 import * as UUID from "/js/uuid.js";
-function parallax_height() {
-    var scroll_top = $(window).scrollTop();
-    var sample_section_top = $(".content").offset().top;
-    var header_height = $(".header-section").outerHeight();
-    $(".content").css({ "margin-top": header_height + 100 });
-    $(".header").css({ height: header_height - scroll_top + 100 });
-}
-parallax_height();
-$(window).scroll(function () {
-    parallax_height();
-});
-$(window).resize(function () {
-    parallax_height();
-});
+// function parallax_height() {
+//     var scroll_top = $(window).scrollTop();
+//     var sample_section_top = $(".content").offset().top;
+//     var header_height = $(".header-section").outerHeight();
+//     $(".content").css({ "margin-top": header_height + 100 });
+//     $(".header").css({ height: header_height - scroll_top + 100 });
+// }
+// parallax_height();
+// $(window).scroll(function () {
+//     parallax_height();
+// });
+// $(window).resize(function () {
+//     parallax_height();
+// });
 
 const goTopBtn = document.querySelector(".go-top");
 
