@@ -16,5 +16,13 @@ class Model_Products extends Model
 
 		return App::$db->execute($string_query);
 	}
+	public function delete_data($id){
+		$string_query = null;
+		if (isset($id)) {
+
+			$string_query = "DELETE FROM Товары WHERE `Товары`.`Код товара` = {$id}";
+		} 
+		return App::$db->execute($string_query);
+	}
 
 }

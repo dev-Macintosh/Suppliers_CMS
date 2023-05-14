@@ -1,5 +1,5 @@
 <img class="content__images-big" src="/images/suppliers.jpg" alt="Фото поставщика №1">
-<div class="content__images-slide">
+<div class="content__images-slide element-animation">
     <div class="content__images-slide__inner">
         <div class="content__images-slide-info">
             <div class="content__images-slide-info__text">Наша система работа с поставщиками обеспечивает высокую
@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<div class="content__images-slide content__images-slide--invert">
+<div class="content__images-slide element-animation content__images-slide--invert">
     <div class="content__images-slide__inner">
         <div class="content__images-slide-info">
             <div class="content__images-slide-info__text">Качественные услуги по всему земному шару.</div>

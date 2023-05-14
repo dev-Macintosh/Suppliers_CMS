@@ -16,4 +16,8 @@ class Controller_Products extends Controller
 	function action_add(){
 		$this->view->generate('products/products_add_view.php', 'template_view.php', null);
 	}
+	function action_delete(){
+		$this->model->delete_data($_POST["product"]);
+		exit('<meta http-equiv="refresh" content="0; url=/products/index" />');
+	}
 }

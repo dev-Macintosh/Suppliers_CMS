@@ -1,13 +1,5 @@
 <div class="footer">
     <div class="footer__inner">
-        <!-- <form class="footer-form" action="javascript:void(null);" onsubmit="mail()" method="post" name="form">
-            <label for="message">Текст сообщения</label>
-            <textarea name="message" rows="15"></textarea>
-            <br>
-            <input type="submit" value="Отправить" />
-        </form>
-        Сделано Корепановым Даниилом @2023 -->
-
         <div class="footer-nav">
             <div class="footer-nav-block">
                 <div class="footer-nav-block__title">О нас</div>
