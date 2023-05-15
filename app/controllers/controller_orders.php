@@ -11,11 +11,11 @@ class Controller_Orders extends Controller
 	function action_index($query=null)
 	{	
 		$data = Model_Orders::get_data($query);		
-		$this->view->generate('orders/orders_view.php', 'template_view.php', $data);
+		$this->view->generate('orders/orders_view.php', 'templates/template_view.php', $data);
 	}
     function action_ones($query=null){
         $data=$this->model->get_order_detail($query);
-        $this->view->generate('orders/orders_detail_view.php', 'template_view.php', $data);
+        $this->view->generate('orders/orders_detail_view.php', 'templates/template_view.php', $data);
     }
 	
 	function action_delete()

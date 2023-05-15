@@ -5,8 +5,8 @@ use Ramsey\Uuid\Uuid;
 if (isset(Route::getQuery()["order"])) {
   ?>
 
-  <div class="progress">
-    <div class="progress__label h3-white">
+  <div class="progress-custom">
+    <div class="progress__label h3-gray">
       Оплачено на
       <span class="progress__label-progress">0%</span>
     </div>
@@ -22,15 +22,18 @@ if (isset(Route::getQuery()["order"])) {
   <?php
 } ?>
 
-<h3 class="h3-white">Выберите заказ, по которому необходимо отобразить детальную информацию</h3>
-<?php
+<h3 class="h3-gray">Выберите заказ, по которому необходимо отобразить детальную информацию</h3>
+<form method="GET" class="form--select-submit">
+  <?php
 
-include 'app/includes/orders-choice.php';
-View::printData($data);
-?>
+  include 'app/includes/orders-choice.php';
+  View::printData($data);
+  ?>
+</form>
+
 <script type="module">
   import { Progress } from '/js/main.js';
-  const root = document.querySelector(".progress");
+  const root = document.querySelector(".progress-custom");
   let data = <?php echo json_encode($data, JSON_HEX_TAG); ?>;
 
   new Progress(root, data);

@@ -10,6 +10,6 @@ class Controller_Main extends Controller
 
 	function action_index($query=null)
 	{		
-		$this->view->generate('main/main_view.php', 'template_view.php', null);
+		$this->view->generate('main/main_view.php', 'templates/template_view.php', null);
 	}
 }

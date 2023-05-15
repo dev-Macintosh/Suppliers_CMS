@@ -54,13 +54,13 @@ class Route
 		$controller = new $controller_name;
 		$action = $action_name;
 
-		if (method_exists($controller, $action)) {
-
+		if ((method_exists($controller, $action) && \Model_Auth::check_auth()) || ($controller_name=='Controller_auth')) {
 			$controller->$action(Route::getQuery());
-		} else {
-			echo $controller_name . "<br>";
-			echo $action_name;
-			// Route::ErrorPage404();
+		} else if(!method_exists($controller, $action) && \Model_Auth::check_auth()) {
+			Route::ErrorPage404();
+		}
+		else{
+			Route::AuthPage();
 		}
 
 	}
@@ -70,7 +70,10 @@ class Route
 		$host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 		header('HTTP/1.1 404 Not Found');
 		header("Status: 404 Not Found");
-		header('Location:' . $host . '404');
+		self::Redirect('404', false);
+	}
+	static function AuthPage(){
+		self::Redirect('auth/index', false);
 	}
 	static function getQuery(){
 		$query=[];
@@ -79,5 +82,15 @@ class Route
 		}
 		return $query;
 	}
+	static private function Redirect($url, $permanent = false)
+	{
+		if (headers_sent() === false)
+		{
+			header('Location: ' . 'http://' . $_SERVER['HTTP_HOST'] . '/' . $url, true, ($permanent === true) ? 301 : 302);
+		}
+	
+		exit();
+	}
+	
 
 }

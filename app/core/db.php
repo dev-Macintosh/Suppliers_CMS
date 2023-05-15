@@ -1,6 +1,7 @@
 <?
 namespace App;
 use App;
+use View;
 class Db 
 {
 
@@ -8,9 +9,18 @@ class Db
     
     public function __construct()
     {
-       
+        $options = [
+            \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+            \PDO::ATTR_EMULATE_PREPARES   => false,
+        ];
         $settings = $this->getPDOSettings();
-        $this->pdo = new \PDO($settings['dsn'], $settings['user'], $settings['pass'], null);
+
+        try {
+            $this->pdo = new \PDO($settings['dsn'], $settings['user'], $settings['pass'], $options);
+       } catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+       }
         
     }
     
@@ -31,7 +41,7 @@ class Db
             return $stmt->fetchAll();
         }
         $stmt = $this->pdo->prepare($query);
-        $stmt->execute($params);
+        $stmt->execute(count($params) > 0 ? $params : null );
         return $stmt->fetchAll();
         
     }    

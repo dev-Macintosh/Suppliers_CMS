@@ -11,7 +11,7 @@ class Controller_Products extends Controller
 	function action_index($query = null)
 	{
 		$data = Model_Products::get_data($query);
-		$this->view->generate('products/products_view.php', 'template_view.php', $data);
+		$this->view->generate('products/products_view.php', 'templates/template_view.php', $data);
 	}
 	function action_add($query = null)
 	{
@@ -22,7 +22,7 @@ class Controller_Products extends Controller
 			$this->model->add_data($data_array);
 			// exit('<meta http-equiv="refresh" content="0; url=/products/index" />');
 		} else {
-			$this->view->generate('products/products_add_view.php', 'template_view.php', null);
+			$this->view->generate('products/products_add_view.php', 'templates/template_view.php', null);
 		}
 	}
 	function action_delete()

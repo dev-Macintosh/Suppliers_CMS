@@ -1,10 +1,12 @@
 <h1>Поставщики</h1>
-<table>
+<table cellpadding="0" cellspacing="0" border="0">
     <thead>
         <th>Код поставщика</th>
         <th>Наименование</th>
         <th>Адрес</th>
     </thead>
+
+
     <?php
 
     foreach ($data as $row) {
@@ -13,4 +15,5 @@
 
 
     ?>
+    </tbody>
 </table>

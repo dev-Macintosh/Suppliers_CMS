@@ -23,6 +23,8 @@ class App
     
     public static function bootstrap()
     {
+        session_start();
+        static::loadClass("app/models/model_auth");
         static::loadClass("app/models/model_orders");
         static::loadClass("app/models/model_suppliers");
         static::loadClass("app/models/model_invoices");
