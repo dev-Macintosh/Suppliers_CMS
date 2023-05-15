@@ -23,7 +23,9 @@ class App
     
     public static function bootstrap()
     {
+        static::loadClass("app/models/model_orders");
         static::loadClass("app/models/model_suppliers");
+        static::loadClass("app/models/model_invoices");
         static::$router = new App\Route();
         static::$db = new App\Db();
         static::$router::start();

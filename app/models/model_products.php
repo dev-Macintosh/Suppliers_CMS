@@ -16,12 +16,19 @@ class Model_Products extends Model
 
 		return App::$db->execute($string_query);
 	}
-	public function delete_data($id){
+	public function add_data($data)
+	{
+		$string_query = null;
+		$string_query = "INSERT INTO Товары (`Код товара`, `Код накладной`, `Код заказа`, `Цена`, `Единица измерения`, `Количество`) VALUES (NULL, {$data['invoice']}, {$data['order']},{$data['price']},'{$data['unit']}',{$data['count']})";
+		return App::$db->execute($string_query);
+	}
+	public function delete_data($id)
+	{
 		$string_query = null;
 		if (isset($id)) {
 
 			$string_query = "DELETE FROM Товары WHERE `Товары`.`Код товара` = {$id}";
-		} 
+		}
 		return App::$db->execute($string_query);
 	}
 

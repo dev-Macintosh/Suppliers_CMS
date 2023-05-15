@@ -43,6 +43,15 @@ class Model_Orders extends Model
         }
 
     }
+    public function delete_data($id)
+	{
+        // $id=1;
+		$string_query = null;
+		if (isset($id)) {
+			$string_query = "SELECT FROM Заказы WHERE `Заказы`.`Код заказа` = '${id}'";
+		}
+		View::printData(App::$db->execute($string_query,array("id"=>$id)));
+	}
 
 }
 ?>

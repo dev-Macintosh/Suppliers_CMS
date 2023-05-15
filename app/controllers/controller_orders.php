@@ -17,4 +17,11 @@ class Controller_Orders extends Controller
         $data=$this->model->get_order_detail($query);
         $this->view->generate('orders/orders_detail_view.php', 'template_view.php', $data);
     }
+	
+	function action_delete()
+	{
+		
+		$this->model->delete_data($_POST["order"]);
+		// exit('<meta http-equiv="refresh" content="0; url=/orders/index" />');
+	}
 }

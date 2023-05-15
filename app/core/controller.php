@@ -14,4 +14,11 @@ class Controller {
 	{
 		//
 	}
+	protected function get_values_for_keys($mapping, $keys)
+	{
+		foreach ($keys as $key) {
+			$output_arr[$key] = $mapping[$key];
+		}
+		return $output_arr;
+	}
 }

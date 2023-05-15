@@ -30,7 +30,7 @@ class View
 	}
 	static public function printData($data)
     {
-        print_r('<pre><p style="background-color: white; color: maroon; padding: 10px; margin: 5px; border: 1px maroon solid;">');
+        print_r('<pre class="element-animation"><p style="background-color: white; color: maroon; padding: 10px; margin: 5px; border: 1px maroon solid;">');
         print_r($data);
         print_r('</p></pre>');
     }

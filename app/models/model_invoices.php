@@ -14,5 +14,11 @@ class Model_Invoices extends Model
 		
 		return App::$db->execute($string_query);
 	}
+	public function add_data($data)
+	{
+		$string_query = null;
+		$string_query = "INSERT INTO Накладная (`Код накладной`, `Код поставщика`, `Дата`, `Стоимость`) VALUES (NULL, " . Model_Suppliers::get_data($data)[0]["Код поставщика"]. ",CURRENT_TIMESTAMP,{$data['price']})";
+		return App::$db->execute($string_query);
+	}
 
 }

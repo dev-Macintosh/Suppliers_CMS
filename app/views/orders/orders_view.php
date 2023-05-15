@@ -10,7 +10,7 @@
     <?php
 
     foreach ($data as $index=>$row) {
-        echo '<tr><td>Заказ №' . ($index + 1)   . '</td><td>' . $row['Название получателя'] . '</td><td>' . $row['Адрес получателя'] . '</td><td><button><a href="/orders/ones?order=' . (int)$row["Код заказа"] . '">Изучить</a></button></td><td><button  class="table__delete-button"> <img src="/images/icons/trash.svg" alt="Иконка удаления" width="30"></button></td></tr>';
+        echo '<tr><td>Заказ №' . ($index + 1)   . '</td><td>' . $row['Название получателя'] . '</td><td>' . $row['Адрес получателя'] . '</td><td><button><a href="/orders/ones?order=' . (int)$row["Код заказа"] . '">Изучить</a></button></td><td> <form action="/orders/delete/' .$row['Код заказа'] .  '"method="POST"><input type="hidden" name="order" value="' . $row["Код заказа"] . '" /><button class="table__delete-button" type="submit"> <img src="/images/icons/trash.svg" alt="Иконка удаления" width="30"></button></form></td></tr>';
     }
     ?>
 </table>

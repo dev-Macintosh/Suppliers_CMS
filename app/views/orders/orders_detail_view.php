@@ -14,11 +14,14 @@ if (isset(Route::getQuery()["order"])) {
     <div class="progress__bar">
       <div class="progress__bar-progress"></div>
     </div>
-    <span class="progress__total-label">Общая сумма: <?php echo $data["Общая сумма"] . " р." ?></span>
+    <span class="progress__total-label">Общая сумма:
+      <?php echo $data["Общая сумма"] . " р." ?>
+    </span>
   </div>
 
   <?php
 } ?>
+
 <h3 class="h3-white">Выберите заказ, по которому необходимо отобразить детальную информацию</h3>
 <?php
 

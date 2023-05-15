@@ -12,7 +12,9 @@
       </div>
       <div class="header-menu__item">
         <a href="../invoices/index" class="header-menu__item__link">Накладные</a>
-        <div class="header-menu__item-sublock"></div>
+        <div class="header-menu__item-sublock">
+        <a href="../invoices/add" class="header-menu__item-sublock__item">Добавить накладную</a>
+        </div>
       </div>
       <div class="header-menu__item">
         <a href="../products/index" class="header-menu__item__link">Товары</a>
