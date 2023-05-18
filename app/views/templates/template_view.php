@@ -45,7 +45,7 @@
 
 	</div>
 	<?php include 'app/includes/footer.php'; ?>
-	<div class="go-top"> <img src="/images/icons/right-arrow.png" width="50" alt="Стрелка вверх"> </div>
+	<div class="go-top"> <img src="/images/icons/arrow-up.svg" width="50" alt="Стрелка вверх"> </div>
 
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>

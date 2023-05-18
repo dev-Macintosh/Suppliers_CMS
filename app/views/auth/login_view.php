@@ -20,5 +20,5 @@
 
 <div class="container-info" style="display:flex;justify-content:space-between;max-width:800px;margin:0 auto;">
     <?php View::printData("Используйте логин:admin и пароль:admin \nдля входа в систему под администратором") ?>
-    <?php View::printData("Используйте логин:user и пароль:user \nдля входа в систему под администратором") ?>
+    <?php View::printData("Используйте логин:user и пароль:user \nдля входа в систему под пользователем") ?>
 </div>

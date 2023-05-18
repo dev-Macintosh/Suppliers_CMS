@@ -1,4 +1,4 @@
-<h1>Страница добавления\редактирования накладной</h1>
+<h1>Страница редактирования накладной</h1>
 <form action="/invoices/edit" class="form-custom" method="POST">
     <?php echo '<input type="hidden" class="form-custom__input" name="invoice" placeholder="Накладная" value="' . $data["Код накладной"] .'">'?>
     <label class="form-custom__label">Поставщик</label>

@@ -8,7 +8,10 @@
       </div>
       <div class="header-menu__item">
         <a href="/suppliers/index" class="header-menu__item__link">Поставщики</a>
-        <div class="header-menu__item-sublock"></div>
+        <div class="header-menu__item-sublock">
+          <span class="remark-container"> <a href="/suppliers/add" class="header-menu__item-sublock__item">Добавить
+              поставщика</a><span class="remark remark-absolute">BETA</span></span>
+        </div>
       </div>
       <div class="header-menu__item">
         <a href="/invoices/index" class="header-menu__item__link">Накладные</a>
@@ -26,8 +29,11 @@
         </div>
       </div>
       <div class="header-menu__item">
-        <a href="/orders/index" class="header-menu__item__link">Заказы</a>
+        <span class="remark-container"> <a href="/orders/index" class="header-menu__item__link">Заказы</a> <span
+            class="remark remark-absolute">BETA</span></span>
+
         <div class="header-menu__item-sublock">
+          <a href="/orders/add" class="header-menu__item-sublock__item">Добавить заказ</a>
           <a href="/orders/ones" class="header-menu__item-sublock__item">Заказы детально</a>
         </div>
       </div>

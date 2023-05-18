@@ -45,9 +45,6 @@ class Route
 		$controller_path = "app/controllers/" . $controller_file;
 		if (file_exists($controller_path)) {
 			require_once "app/controllers/" . $controller_file;
-		} else {
-
-			Route::ErrorPage404();
 		}
 
 
@@ -67,7 +64,6 @@ class Route
 
 	static function ErrorPage404()
 	{
-		$host = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 		header('HTTP/1.1 404 Not Found');
 		header("Status: 404 Not Found");
 		self::Redirect('404', false);

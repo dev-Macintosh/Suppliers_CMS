@@ -4,7 +4,7 @@
         <div class="content__images-slide-info">
             <div class="content__images-slide-info__text">Наша система работа с поставщиками обеспечивает высокую
                 надёжность и убобство взаимодействия с системой.</div>
-            <button class="content__images-slide-info__button">Попробовать</button>
+            <button class="content__images-slide-info__button"><a href="/suppliers/index">Попробовать</a> </button>
         </div>
         <div class="content__images-slide__photo">
             <img src="/images/suppliers_2.jpg" alt="">
@@ -15,7 +15,7 @@
     <div class="content__images-slide__inner">
         <div class="content__images-slide-info">
             <div class="content__images-slide-info__text">Качественные услуги по всему земному шару.</div>
-            <button class="content__images-slide-info__button">Попробовать</button>
+            <button class="content__images-slide-info__button"><a href="/suppliers/index">Попробовать</a> </button>
         </div>
         <div class="content__images-slide__photo">
             <img src="/images/suppliers_3.jpg" alt="">

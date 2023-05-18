@@ -26,7 +26,7 @@
                     <button class="footer-nav-block__button" type="submit">
                         <img src="/images/icons/button-arrow.svg" alt="->">
                     </button>
-                </div>
+                </form>
 
             </div>
         </div>

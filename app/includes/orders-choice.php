@@ -3,7 +3,7 @@
     use App\Route;
     echo '<option></option>';
     foreach (Model_Orders::get_data() as $row) {
-        if (isset(Route::getQuery()["order"]) && $row["Код заказа"] == Route::getQuery()["order"]) {
+        if ((isset(Route::getQuery()["order"]) && $row["Код заказа"] == Route::getQuery()["order"]) || (!is_null($data) && $data["Код заказа"] == $row['Код заказа'])) {
             echo '<option selected>' . $row['Код заказа'] . '</option>';
         } else {
             echo '<option>' . $row['Код заказа'] . '</option>';

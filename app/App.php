@@ -28,6 +28,8 @@ class App
         static::loadClass("app/models/model_orders");
         static::loadClass("app/models/model_suppliers");
         static::loadClass("app/models/model_invoices");
+        static::loadClass("app/models/model_payment_type");
+        static::loadClass("app/models/model_payments");
         static::$router = new App\Route();
         static::$db = new App\Db();
         static::$router::start();
